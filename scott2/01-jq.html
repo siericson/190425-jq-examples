@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery example 1 - show/hide</title>
+    <meta name="viewport" content="width=device-width,  initial-scale=1.0">
+    <link rel="stylesheet" href="css/base.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('.toggle').click(function(){
+                $('.speedy').toggle(50);
+                $('.regular').toggle();
+                $('.fast').toggle('fast');
+                $('.slow').toggle('slow');
+                $('.snail').toggle(2000);
+            })
+        }) // end doc ready
+    </script>
+    
+</head>
+<body>
+   
+<!--   section>header>h1{Hello}+h2{Happy Monday}^article*3>h3{Subheading}+p>lorem-->
+    <section>
+        <header>
+            <h1>Hello</h1>
+        </header>
+        <article>
+             <button class="toggle">Toggle paragraphs</button>
+             <br><br>
+             <p class="speedy">This paragraph will show/hide very quickly/p>
+             <p class="regular">This paragraph will show/hide at default speed</p>
+             <p class="fast">This paragraph will show/hide at fast speed</p>
+             <p class="slow">This paragraph will show/hide slow speed</p>
+             <p class="snail">This paragraph will show/hide snail speed</p>
+        </article>
+    </section>
+</body>
+</html>

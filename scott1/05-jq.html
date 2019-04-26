@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery example 5 - Fade 2 method</title>
+    <meta name="viewport" content="width=device-width,  initial-scale=1.0">
+    <link rel="stylesheet" href="css/base.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+        $(function(){
+            $('p').css({
+                'backgroundColor': '#069',
+                'display': 'none'
+                });
+            $('.fader').click(function(){
+                $('.none').fadeTo('fast', .1);
+                $('.half').fadeTo('slow', .5);
+                $('.full').fadeTo(1500, 1); 
+            }); // end fader click
+
+        }) // end doc ready
+    </script>
+    
+</head>
+<body>
+   
+<!--   section>header>h1{Hello}+h2{Happy Monday}^article*3>h3{Subheading}+p>lorem-->
+    <section>
+        <header>
+            <h1>Hello</h1>
+        </header>
+        <article>
+            <button class="fader">Fade to....</button>
+            <br><br>
+            <p class="none">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus laudantium, numquam nesciunt id hic, recusandae quae ipsam non deleniti magni, incidunt laborum soluta vitae quos suscipit earum eos! Quam, quis!</p>
+            <p class="half">Assumenda voluptatibus labore enim vero blanditiis distinctio et culpa beatae fugiat, deleniti modi alias ab voluptate laborum eos ut consequuntur incidunt sed hic necessitatibus rerum vel esse, odit cum. Aliquid.</p>
+            <p class="full">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore obcaecati eaque cum cumque. Iste vero, nobis at unde, eaque maiores eligendi suscipit iusto ea repudiandae, quam ratione corporis voluptate. Id.</p>
+        </article>
+    </section>
+</body>
+</html>

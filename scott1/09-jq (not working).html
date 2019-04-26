@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery example 9 - stop method</title>
+    <meta name="viewport" content="width=device-width,  initial-scale=1.0">
+    <link rel="stylesheet" href="css/base.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    
+    <style>
+        .circle {
+            background-color: #7ac4ea;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            position: relative;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+/*
+        .cAlt {
+            background-color: #7aeac6;
+        }
+*/
+    
+    </style>
+    <script>
+        $(function(){
+          // start animation
+            $('.b1').click(function(){
+                $('.circle').animate({top:'+=50'}, 1500);
+            });
+          
+          // stop animation
+          $('.b2').click(function(){
+            $('.circle').stop();
+          });
+        
+        // back button
+            $('.b3').click(function(){
+                $('.circle').animate({top:'-=50'}, 1500);
+            })
+        
+        // reset button
+        $('.b4').click(function(){
+            $('.circle').animate({top:0}, 'fast');
+        })
+          
+        }) // end doc ready
+    </script>
+    
+</head>
+<body>
+   
+<!--   section>header>h1{Hello}+h2{Happy Monday}^article*3>h3{Subheading}+p>lorem-->
+    <section>
+        <header>
+            <h1>Hello</h1>
+        </header>
+        <article>
+           <button class="b1">Start</button>
+           <button class="b2">Stop</button>
+           <button class="b3">Back</button>
+           <button class="b4">Reset</button>
+           <br><br>
+            <div class="circle c1">1</div>
+
+        </article>
+    </section>
+</body>
+</html>

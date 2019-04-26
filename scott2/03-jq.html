@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery example 3 - fade out/in</title>
+    <meta name="viewport" content="width=device-width,  initial-scale=1.0">
+    <link rel="stylesheet" href="css/base.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script>
+        $(function(){
+            
+            // add background color & hide the in button
+            $('p').css('background-color', '#90c6c3');
+            $('.btn-in').hide();
+            
+            // clicke out button to fade out the paragraph, hide the out, reveal the in buttons
+            $('.btn-out').click(function(){
+                $('p').fadeOut();
+                $('.btn-out').fadeOut(200, function(){
+                    $('.btn-in').fadeIn(200);
+                });  
+            });
+            
+            // click in button to show the paragraph, hide the in & show the out buttons
+            $('.btn-in').click(function(){
+                $('p').fadeIn();
+                $('.btn-in').hide();
+                $('.btn-out').show();
+            });
+        }) // end doc ready
+    </script>
+    
+</head>
+<body>
+   
+<!--   section>header>h1{Hello}+h2{Happy Monday}^article*3>h3{Subheading}+p>lorem-->
+    <section>
+        <header>
+            <h1>Hello</h1>
+        </header>
+        <article>
+            <button class="btn-out">Fade out</button>
+            <button class="btn-in">Fade in</button>
+            <br><br>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus laudantium, numquam nesciunt id hic, recusandae quae ipsam non deleniti magni, incidunt laborum soluta vitae quos suscipit earum eos! Quam, quis!</p>
+            <p>Assumenda voluptatibus labore enim vero blanditiis distinctio et culpa beatae fugiat, deleniti modi alias ab voluptate laborum eos ut consequuntur incidunt sed hic necessitatibus rerum vel esse, odit cum. Aliquid.</p>
+        </article>
+    </section>
+</body>
+</html>

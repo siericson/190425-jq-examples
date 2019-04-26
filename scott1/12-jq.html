@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery example 12 - getter/setters</title>
+    <meta name="viewport" content="width=device-width,  initial-scale=1.0">
+    <link rel="stylesheet" href="css/base.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    
+    <style>
+        p {
+            background-color: red;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+    
+    </style>
+    <script>
+        $(function(){
+            $('.b1').click(function(){
+                var myString = $('p.bonus').text();
+                alert(myString);
+            });
+            
+            $('.b2').click(function(){
+                var myString = $('p.bonus').html();
+                $('.display').text(myString); // displaying: text is displaying html code, html() is rendering the html code
+            });
+            
+        }) // end doc ready
+    </script>
+    
+</head>
+<body>
+   
+<!--   section>header>h1{Hello}+h2{Happy Monday}^article*3>h3{Subheading}+p>lorem-->
+    <section>
+        <header>
+            <h1>Hello</h1>
+        </header>
+        <article>
+            <button class="b1">Get all paragraph text</button>
+            <button class="b2">Get paragraph text</button>
+            
+            <p>This is the first paragraph</p>
+            <p>This is the second paragraph</p>
+            <p class="bonus">This is the <strong>third</strong> paragraph</p>
+            <p class="display"></p>
+        </article>
+    </section>
+</body>
+</html>

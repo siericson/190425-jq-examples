@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery example 14</title>
+    <meta name="viewport" content="width=device-width,  initial-scale=1.0">
+    <link rel="stylesheet" href="css/base.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    
+    <style>
+/*
+        figure {
+            text-align: center;
+        }
+*/
+    
+    </style>
+    <script>
+        $(function(){
+            $('.b1').click(function(){
+                var myUrl = $('a').attr('href');
+                alert("This is the url: " + myUrl);
+            });
+            
+            $('.b2').click(function(){
+                var descript = $('img').attr('alt');
+                $('.description').text(descript);
+            });
+
+            
+        }) // end doc ready
+    </script>
+    
+</head>
+<body>
+   
+<!--   section>header>h1{Hello}+h2{Happy Monday}^article*3>h3{Subheading}+p>lorem-->
+    <section>
+        <header>
+            <h1>Hello</h1>
+        </header>
+        <article>
+            <button class="b1">Get href</button>
+            <button class="b2">Get "alt" description</button>
+            <br><br>
+            <p>This is the first paragraph. Check out <a href="http://www.google.com">google</a></p>
+            <br>
+            <figure>
+                <img src="images/leopardShark.jpg" alt="Leopard shark">
+                <figcaption class="description"></figcaption>
+            </figure>
+        </article>
+    </section>
+</body>
+</html>

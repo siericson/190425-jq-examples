@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery example 8 - Animate Method</title>
+    <meta name="viewport" content="width=device-width,  initial-scale=1.0">
+    <link rel="stylesheet" href="css/base.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    
+    <style>
+        .circle {
+            background-color: #7ac4ea;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            position: relative;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .c3 {
+            background-color: #7aeac6;
+        }
+    
+    </style>
+    <script>
+        $(function(){
+            $('.b1').click(function(){
+                $('.c1').animate({
+                    marginLeft: 400,
+                    top: 350
+                }, 2000);
+            }); // animate method: $(selector).animate({property:values,..}duration, callback)
+            
+            
+            $('.b2').click(function(){
+                $('.c2').animate({marginLeft: 350}).animate({top:325});
+            })
+            
+            $('.b3').click(function(){
+                $('.c3').animate({
+                    top: '+=30px',
+                    left: '+=30px',
+                    width: '+=10px',
+                    height: '+=10px',
+                    fontSize: '+=2px'
+                })
+            })
+        }) // end doc ready
+    </script>
+    
+</head>
+<body>
+   
+<!--   section>header>h1{Hello}+h2{Happy Monday}^article*3>h3{Subheading}+p>lorem-->
+    <section>
+        <header>
+            <h1>Hello</h1>
+        </header>
+        <article>
+           <button class="b1">Start Animation 1</button>
+           <button class="b2">Start Animation 2</button>
+           <button class="b3">Start Animation 3</button>
+           <br><br>
+            <div class="circle c1">1</div>
+            <div class="circle c2">2</div>
+            <div class="circle c3">3</div>
+        </article>
+    </section>
+</body>
+</html>
